@@ -1,0 +1,2 @@
+Test = "test"
+print(Test)
