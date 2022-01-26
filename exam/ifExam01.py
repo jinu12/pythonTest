@@ -12,8 +12,8 @@
 
 test = bool
 while test:
-    case = int(input('세대 구문 : 1, 종료 : 2\n'))
-    if case == 1:
+    case = input('세대 구문 : 1, 종료 : 2\n')
+    if case == "1":
         age = int(input('나이를 입력해주세요 : '))
         human = int(input('성별을 입력해수제요 : '))
         if age >= 20:
@@ -26,6 +26,8 @@ while test:
                 print("청소년 남자")
             elif human == 2:
                 print("청소년 여자")
-    elif case == 2:
+    elif case == "2":
         print("종료되었습니다.")
         test = False
+    else:
+        print("정확한 숫자를 입력해수에용")
