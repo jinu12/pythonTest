@@ -5,6 +5,7 @@
 
 
 for i in range(2, 9):
+    print("{} 단".format(i))
     for j in range(1, 9):
         print("{} * {} = {}".format(i, j, (i * j)), end=" ")
     print(" ")
@@ -12,6 +13,7 @@ for i in range(2, 9):
 print("*"*40)
 
 for i in range(2, 9):
+    print("{} 단".format(i))
     for j in range(1, 9):
         print("{} * {} = {}".format(i, j, (i * j)))
-    print("", end=" ")
+    print("", end="")
