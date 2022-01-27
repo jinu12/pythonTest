@@ -23,9 +23,6 @@
 # - 순서를 가지고 있지 않다.
 # - 인덱싱과 슬라이싱이 불가능
 
-import numpy as np
-import matplotlib as mat
-
 num1 = 100
 num2 = 95
 num3 = 50
@@ -69,4 +66,3 @@ for j in subjectLists:
     for i in jumsulists:
         print(i, end=" ")
     print("")
-

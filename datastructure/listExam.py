@@ -10,3 +10,45 @@ for i in List:
 avg = Sum / len(List)
 print("점수 총합 : ", Sum)
 print("평균 : ", avg)
+
+# Lists = []
+# while True:
+#     num = input("조회할려면 1, 점수를 추가할려면 2, 죵료할려면 3 ")
+#     if num == "1":
+#         for i in Lists:
+#             print(i)
+#     elif num == "2":
+#         jumsu = int(input("점수를 입력해주세요 : "))
+#         Lists.append(jumsu)
+#     elif num == "3":
+#         break
+#     else:
+#         print("정확한 숫자를 입력해주세요")
+
+Str = "python programming"
+
+Lists = []
+for i in range(0, 18):
+    Lists.append(Str[i])
+print(Lists)
+
+PythonList = ""
+
+for i in range(0, 18):
+    PythonList = PythonList + Lists[i]
+print(PythonList)
+
+print("*" * 40)
+
+changePythonList = ""
+
+for i in range(17, -1, -1):
+    changePythonList = changePythonList + Lists[i]
+print(changePythonList)
+print("*" * 40)
+
+
+#
+# StrList.sort(reverse=True)
+# for i in StrList:
+#     print(i)
