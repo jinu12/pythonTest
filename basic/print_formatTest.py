@@ -4,4 +4,6 @@
 # print("{} + {} = {} ".format(num1, num2, (num1 + num2)))
 
 print("{} {} {}".format(123, 456, 789))
-print("{0} {2} {1}".format(123, 456, 789))
+print("{} {} {}".format(123, 456, 789))
+print("{0:5d}, {2:1f}, {1:15d}".format(123, 456, 789.12345))
+print("{0}")
