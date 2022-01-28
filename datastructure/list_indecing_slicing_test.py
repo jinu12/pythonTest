@@ -2,11 +2,15 @@
 list1 = list(range(10, 101, 10))
 print(list1)
 
+print("*" * 60)
+
 print(list1[1])
 print(list1[5])
 print(list1[9])
 print(list1[-1])
 print(list1[-5])
+
+print("*" * 60)
 
 # 리스트의 슬라이싱
 print(list1[4:10:1])
@@ -14,6 +18,29 @@ print(list1[4:10:2])
 print(list1[4:10])
 print(list1[:2])
 print(list1[2:])
+print(list1[:])
+print(list1[::2])
+print(list1[::-3])
+
+print("*" * 60)
+
+list3 = list("python programming")
+
+print("*" * 60)
+
+print(list3)
+
+print("*" * 60)
+
+for i in list3:
+    print(i, end="")
+print("")
+
+print("*" * 60)
+
+for i in list3[::-1]:
+    print(i, end="")
+print("")
 
 '''
     리스트 인덱싱
