@@ -2,6 +2,8 @@
 # [출력 형태]
 # 점수 총합 :
 # 평균 :
+import random
+
 List = [88, 99, 77, 100, 99]
 Sum = 0
 
@@ -52,3 +54,31 @@ print("*" * 40)
 # StrList.sort(reverse=True)
 # for i in StrList:
 #     print(i)
+
+num = 10
+print(random.randrange(1, num+1))
+print(random.randint(1, num))
+
+Str = list('python programming')
+print(Str)
+
+for i in Str:
+    print(i, end="")
+print("")
+
+print("*" * 60)
+
+print(len(Str))
+
+for i in range(len(Str)):
+    print("{}: {}".format(i, Str[i]), end=" ")
+print("")
+
+print("*" * 60)
+
+ReStr = list(reversed(Str))
+
+for i in ReStr:
+    print(i, end="")
+print("")
+print("*" * 60)
