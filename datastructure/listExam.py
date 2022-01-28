@@ -76,6 +76,12 @@ print("")
 
 print("*" * 60)
 
+for i in range(len(Str)-1, -1, -1):
+    print("{}: {}".format(i, Str[i]), end=" ")
+print("")
+
+print("*" * 60)
+
 ReStr = list(reversed(Str))
 
 for i in ReStr:

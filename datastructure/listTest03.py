@@ -19,7 +19,13 @@ print("*" * 60)
 print(len(Str))
 
 for i in range(len(Str)):
-    print("{}: {}".format(i, Str[i]), end=" ")
+    print("{}:{}".format(i, Str[i]), end=" ")
+print("")
+
+print("*" * 60)
+
+for i in range(len(Str)-1, -1, -1):
+    print("{}:{}".format(i, Str[i]), end=" ")
 print("")
 
 print("*" * 60)
