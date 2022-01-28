@@ -20,8 +20,9 @@ printelement = ""
 Sum = 0
 num = int(input("리스트의 요소를 몇 개 만들까요?"))
 for i in range(num):
-    element = int(input("리스트에 추가될 값을 입력하세요 : "))
-    elementList.append(element)
+    elementList.append(int(input("리스트에 추가될 값을 입력하세요 : ")))
+
+print("*" * 40)
 
 for i in range(len(elementList)):
     Sum = Sum + elementList[i]
@@ -32,6 +33,7 @@ for i in range(len(elementList)-1, -1, -1):
     print("{} ".format(elementList[i]), sep=",", end="")
 print("")
 
-avg = Sum / len(elementList)
+print("*" * 40)
+
 print("요소의 합 : {}".format(Sum))
-print("요소의 평균 : {}".format(avg))
+print("요소의 평균 : {}".format(Sum / num))
