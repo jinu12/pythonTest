@@ -14,6 +14,18 @@ for i in networkxtwolist:
         print(j, end="     ")
     print("")
 
+# print("\t\t수정된 배열")
+# print("=" * 25)
+#
+# for i in range(len(networkxtwolist)):
+#     networkxtwolist[i][i] = "*"
+# print(networkxtwolist)
+
+# for i in networkxtwolist:
+#     for j in i:
+#         print(j, end="     ")
+#     print("")
+
 print("\t\t수정된 배열")
 print("=" * 25)
 
@@ -24,5 +36,3 @@ for i in range(len(networkxtwolist)):
         else:
             print("*", end="     ")
     print("")
-
-
