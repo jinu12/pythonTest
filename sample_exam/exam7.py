@@ -12,15 +12,17 @@
 # print(decimalList)
 
 count = 0
-num = list(range(1, 51))
 decimalList = []
-for i in range(len(num)):
-    for j in range(len(num)):
-        if num[i] % (j+1) == 0:
+for i in range(1, 51, 1):
+    for j in range(1, 51, 1):
+        if i % j == 0:
             count = count + 1
-            print(j)
-            if count == 2:
-                print(num[j])
+        if count == 2:
+            decimalList.append(j)
+            count = 0
+for i in range(len(decimalList)):
+    print(decimalList[i])
+
 
 
 
