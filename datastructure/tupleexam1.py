@@ -4,4 +4,4 @@ total = 0
 for i in range(len(tuple1)):
     total = total + tuple1[i]
 print("총합 : {}".format(total))
-print("총합 : {}".format(total/len(tuple1)))
+print("평균 : {}".format(total/len(tuple1)))
