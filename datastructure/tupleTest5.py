@@ -17,7 +17,7 @@ print(tuple1)
 
 # 리스트나 튜플의 값을 거내서 여러 개의  변수에 한꺼번에 담는 작업만 가능 - 언팩킹
 num1, num2, num3 = (10, 20, 30)
-print(" {}, {], {}".format(num1, num2, num3))
+print(" {}, {}, {}".format(num1, num2, num3))
 
 num4, num5, num6 = [10, 20, 30]
 print(" {}, {}, {}".format(num4, num5, num6))
