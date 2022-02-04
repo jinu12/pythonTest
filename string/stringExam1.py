@@ -4,6 +4,19 @@
 answer = input("입력데이터: ")
 print("출력데이터: " + answer[::-1])
 print("*" * 60)
+
+# for i in range(len(answer)-1,-1,-1):
+#     print(answer[i], end="")
+# print("")
+
+# for index, value in enumerate(answer):
+#     print(answer[index], end="")
+
+# outputstr = ""
+# size = len(answer)
+# for i in range(size):
+#     outputstr = outputstr + answer[size-(i+1)]
+# print(outputstr)
 # 2. 입력받는 문자열 중 소문자 a가 있음면 대문자 A로 변경해서 출력하기
 answers = input("입력데이터: ")
 print("출력데이터:", end=" ")
@@ -30,3 +43,6 @@ for i in range(len(casercipher)):
         print("c", end="")
     else:
         print("", chr(ord(casercipher[i])+3), end="")
+
+# 1부터 10000까지의 숫자에서 8이라는 숫자가 총 몇번 나오는지 체크하기
+# 8이 포함되어 있는 숫자의 숫자를 카운팅하는 것이 아니라 8이라는 숫자가 몇 번 나오는지 카운트
