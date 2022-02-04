@@ -30,6 +30,16 @@ def jobscheduler3(name, time):
     print("")
 
 
+# 4. 매개변수가 있고 리턴값이 있는 함수의 정의
+def jobscheduler4(name, time):
+    print("*" * 30)
+    print(name, "의 작업시간:", time)
+    # print("20시간을 보충하셔야 합니다.")
+    print("*" * 30)
+    print("")
+    return 60 - time
+
+
 # 1. 매개변수가 없는 경우 호출
 for i in range(3):
     jobscheduler()
@@ -44,3 +54,11 @@ jobscheduler3("장동건", 20)
 jobscheduler3("이유정", 40)
 jobscheduler3("아이유", 50)
 
+# 4.매개변수가 있고 리턴값이 있는 함수의 호출
+jobscheduler4("장동건", 20)
+result = jobscheduler4("장동건", 20)
+if result < 30:
+    print("정상")
+else :
+    print("비정상")
+print("비작업 시간:", jobscheduler4("장동건", 20))
