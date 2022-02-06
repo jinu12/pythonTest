@@ -1,4 +1,3 @@
-# 파보나치 수열
 pabocount = []
 n = int(input())
 pabocount.append(0)
