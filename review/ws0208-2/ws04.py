@@ -1,19 +1,25 @@
-# ws04.py
-#
-import math
+from math import sqrt, pow
 
-total = 0
-# 4. 10행 10열의 정방 행렬 구조의 지형이 있다
+structure = [[], [], [], [], [], [], [], [], [], []]
+width = 0
+length = 0
+print("==========전체 셀==========")
+for i in range(len(structure)):
+    for j in range(len(structure)):
+        structure[i].append("ㅁ")
 
-# 각 셀의 가로와 세로의 길이는 1미터라고 했을때  대각선의 길이를 구하시오.
-for i in range(1, 11):
-    total = total + i
-width = total
-vertical = total
+for i in range(len(structure)):
+    length += 1
+    for j in range(len(structure)):
+        width += 1
+        print(structure[i][j], end=" ")
+    print("")
 
-diagonal = math.sqrt(vertical + width)
+width = width / len(structure)
+diagonal = sqrt(pow(width, 2) + pow(length, 2))
 
-print("가로 : ", width)
-print("세로 : ", vertical)
-print("대각선 : ", diagonal)
+
+print("전체 셀의 가로 길이 : {}m, 세로 길이 : {}m".format(width, length))
+print("전체 셀의 대각선 길이 : {}m".format(diagonal))
+
 
