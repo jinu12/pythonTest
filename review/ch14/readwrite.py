@@ -1,23 +1,26 @@
 def filewrite(name, content):
-    f = open(name, "wt")
+    f = None
     try:
+        f = open(name, "wt")
         f.write(content)
     except:
         raise FileExistsError
     finally:
-        f.close()
+        if f is not None:
+            f.close()
 
 
 def fileread(name):
-    f = open(name, 'rt')
+    f = None
     try:
+        f = open(name, 'rt')
         text = f.read()
     except FileNotFoundError as fe:
         raise fe
     except IOError as ie:
         raise ie
     finally:
-        f.close()
+        if f is not None:
+            f.close()
     return text
-
 
