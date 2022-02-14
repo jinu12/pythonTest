@@ -12,6 +12,7 @@ try:
     con.commit()
 except:
     print('Error')
+    raise
 finally:
     if cs is not None:
         cs.close()
