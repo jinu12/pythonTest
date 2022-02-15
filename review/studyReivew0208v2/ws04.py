@@ -21,5 +21,3 @@ diagonal = sqrt(pow(width, 2) + pow(length, 2))
 
 print("전체 셀의 가로 길이 : {}m, 세로 길이 : {}m".format(width, length))
 print("전체 셀의 대각선 길이 : {}m".format(diagonal))
-
-
