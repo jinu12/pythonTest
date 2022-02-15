@@ -12,14 +12,19 @@ class Account:
     # Constructor(생성자))
     def __init__(self, accno, balance, owner):
         self.__accno = accno
-        self.__balance = balance
+        if balance <= 0:
+            self.__balance = 0
+        else:
+            self.__balance = balance
+        # self.__balance = balance
         self.__owner = owner
 
     @property
     def owner(self):
         return self.__owner
 
-    def setowner(self, owner):
+    @owner.setter
+    def owner(self, owner):
         self.__owner = owner
 
     @property
@@ -66,7 +71,4 @@ class IAccount(Account):
 
     def setInterest(self, interest):
         self.__interest = interest
-
-
-
 
