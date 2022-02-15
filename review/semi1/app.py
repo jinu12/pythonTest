@@ -1,4 +1,4 @@
-import itemdb
+# import itemdb
 
 
 def start():
@@ -26,7 +26,8 @@ def start():
             rate = float(input('비율 : '))
 
             try:
-                itemdb.insert(ids, names, price, rate)
+                # itemdb.insert(ids, names, price, rate)
+                print('입력되었습니다')
             except:
                 print('Insert Error')
                 print("입력이 안됬습니다. 다시 시도해주세요.")
@@ -39,8 +40,9 @@ def start():
 
             if selects == 1:
                 try:
-                    datas = itemdb.select()
-                    print(datas)
+                    print('조회되었습니다')
+                    # datas = itemdb.select()
+                    # print(datas)
 
                 except:
                     print('Select Error')
@@ -51,16 +53,16 @@ def start():
                 try:
                     print("방법1")
 
-                    for data in itemdb.select():
-                        print("%d %s %s " % (data[0], data[1], data[2]))
+                    # for data in itemdb.select():
+                    #     print("%d %s %s " % (data[0], data[1], data[2]))
 
                     print("방법2")
-                    datas = itemdb.selects()
-                    print(datas)
+                    # datas = itemdb.selects()
+                    # print(datas)
                 except:
-
                     print('Select Error')
                     print("조회가 안됬습니다. 다시 시도해주세요.")
+                    raise
 
         elif cmd == 'so':
 
@@ -69,10 +71,12 @@ def start():
             ids = int(input('id : '))
 
             try:
-                itemdb.selectone(ids)
+                # itemdb.selectone(ids)
+                print('조회되었습니다')
             except:
                 print('Select Error')
                 print("조회가 안됬습니다. 다시 시도해주세요.")
+                raise
 
         elif cmd == 'u':
 
@@ -84,10 +88,12 @@ def start():
             rate = float(input('비율 : '))
 
             try:
-                itemdb.update(names, price, rate, ids)
+                # itemdb.update(names, price, rate, ids)
+                print('입력되었습니다')
             except:
                 print('Update Error')
                 print("업데이트가 안됬습니다. 다시 시도해주세요.")
+                raise
 
         elif cmd == 'd':
 
@@ -96,10 +102,12 @@ def start():
             ids = int(input('삭제 id : '))
 
             try:
-                itemdb.delete(ids)
+                # itemdb.delete(ids)
+                print('삭제되었습니다')
             except:
                 print('Delete Error')
                 print("삭제가 안됬습니다. 다시 시도해주세요.")
+                raise
 
         else:
             print('올바른 단어를 입력해주세요')
