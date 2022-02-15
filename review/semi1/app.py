@@ -1,7 +1,10 @@
-# import itemdb
+from itemModel import Item
+from itemdb import ItemDb
 
 
 def start():
+    itemdb = ItemDb('shopdb')
+    print('start App')
 
     print(" " * 30, end="")
     print('Start App')
@@ -26,7 +29,8 @@ def start():
             rate = float(input('비율 : '))
 
             try:
-                # itemdb.insert(ids, names, price, rate)
+                item = Item(ids, names, price, rate)
+                itemdb.insert(item)
                 print('입력되었습니다')
             except:
                 print('Insert Error')
@@ -41,8 +45,9 @@ def start():
             if selects == 1:
                 try:
                     print('조회되었습니다')
-                    # datas = itemdb.select()
-                    # print(datas)
+                    datas = itemdb.select()
+                    for data in datas:
+                        print('%d %s %d %f' % data)
 
                 except:
                     print('Select Error')
@@ -51,14 +56,10 @@ def start():
 
             elif selects == 2:
                 try:
-                    print("방법1")
+                    for data in itemdb.select():
+                        print("%d %s %s " % (data[0], data[1], data[2]))
 
-                    # for data in itemdb.select():
-                    #     print("%d %s %s " % (data[0], data[1], data[2]))
-
-                    print("방법2")
-                    # datas = itemdb.selects()
-                    # print(datas)
+                    print('조회되었습니다')
                 except:
                     print('Select Error')
                     print("조회가 안됬습니다. 다시 시도해주세요.")
@@ -71,7 +72,7 @@ def start():
             ids = int(input('id : '))
 
             try:
-                # itemdb.selectone(ids)
+                itemdb.selectOne(ids)
                 print('조회되었습니다')
             except:
                 print('Select Error')
@@ -88,7 +89,8 @@ def start():
             rate = float(input('비율 : '))
 
             try:
-                # itemdb.update(names, price, rate, ids)
+                item = Item(ids, names, price, rate)
+                itemdb.update(item)
                 print('입력되었습니다')
             except:
                 print('Update Error')
@@ -102,7 +104,7 @@ def start():
             ids = int(input('삭제 id : '))
 
             try:
-                # itemdb.delete(ids)
+                itemdb.delete(ids)
                 print('삭제되었습니다')
             except:
                 print('Delete Error')

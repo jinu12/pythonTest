@@ -1,3 +1,4 @@
+import itemsql
 
 
 class Item:
@@ -6,9 +7,6 @@ class Item:
         self.__name = name
         self.__price = price
         self.__rate = rate
-
-    def __str__(self):
-        return str(id) + ' ' + self.__name + ' ' + str(self.__rate)
 
     def getId(self):
         return self.__ids
@@ -26,10 +24,19 @@ class Item:
         return self.__price
 
     def setPrice(self, price):
-        self.__ids = price
+        self.__price = price
 
     def getRate(self):
-        return self.__ids
+        return self.__rate
 
     def setRate(self, rate):
-        self.__ids = rate
+        self.__rate = rate
+
+    def getUpdate(self):
+        return itemsql.ITEM_UPDATE % (self.__name, self.__price, self.__rate, self.__ids)
+
+    def getInsert(self):
+        return itemsql.ITEM_INSERT % (self.__ids, self.__name, self.__price, self.__rate)
+
+    def __str__(self):
+        return str(id) + ' ' + self.__name + ' ' + str(self.__rate)
