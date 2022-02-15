@@ -1,4 +1,4 @@
-from Account import Account
+from account import Account
 
 # acc1 Object
 acc1 = Account('11112222', 1000, 'James')

@@ -19,12 +19,12 @@ class Account:
         self.__owner = owner
 
     @property
-    def accno(self):
-        return self.__accno
-
-    @property
     def owner(self):
         return self.__owner
+
+    @property
+    def accno(self):
+        return self.__accno
 
     def getaccno(self):
         return self.__accno
